@@ -5,7 +5,7 @@ import wordsToNumbers from 'words-to-numbers';
 import Modal from './components/Modal/ModalComponent';
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
-require('dotenv').config();
+
 
 
 
