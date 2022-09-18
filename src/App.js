@@ -5,9 +5,7 @@ import wordsToNumbers from 'words-to-numbers';
 import Modal from './components/Modal/ModalComponent';
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
-
-
-const alanKey = 'Your Key'
+require('dotenv').config();
 
 
 
@@ -21,7 +19,7 @@ const App = () => {
     useEffect(() => {
         // let alanBtnInstance =
          alanBtn({
-            key: alanKey,
+            key: process.env.API_KEY,
             onCommand: ({ command, articles, number }) => {
                 if(command === 'newHeadlines') {
                     setNewsArticles(articles);
