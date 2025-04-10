@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# News App with Alan AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+News App with AI is a React-based web application that leverages the Alan AI SDK to provide a voice-controlled news reading experience. The app fetches news articles and displays them as interactive cards, allowing users to browse, read, and open articles using voice commands. Features include an introductory video on the homepage, a modal with instructions for voice commands, and a responsive grid layout for news articles.
 
-In the project directory, you can run:
+This project is ideal for developers, news enthusiasts, or anyone interested in exploring voice-controlled applications using AI. It demonstrates the integration of React with the Alan AI SDK for a seamless user experience.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Voice-Controlled Interaction** – Use voice commands to browse news, open specific articles, and access instructions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Interactive News Cards** – Articles are presented in a visually engaging, responsive grid layout.
 
-### `npm test`
+**Introductory Video** – A welcome video plays on the homepage for a smooth user onboarding experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Instructional Modal** – Built-in modal offers a quick guide on supported voice commands.
 
-### `npm run build`
+**Mobile-Responsive Design** – Built using Material-UI for a seamless experience across devices.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Article Highlighting** – Actively highlights the currently focused article based on voice input.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Before running the app, ensure you have:
 
-### `npm run eject`
+- Node.js (v14 or later) and npm
+- Git for cloning the repo
+- An Alan AI Account with an active API key
+- Basic familiarity with React
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the Repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/addobentil/News-App-with-AI.git
+cd News-App-with-AI
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+````
 
-## Learn More
+### 2. Install Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Key dependencies include:
 
-### Code Splitting
+- react: For building the user interface.
+- @alan-ai/alan-sdk-web: For voice control functionality.
+- @material-ui/core: For UI components and styling.
+- words-to-numbers: For parsing spoken numbers in voice commands.
+- use-sound: For playing sound effects.
+- classnames: For conditional class names in components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. Set Up Alan AI
 
-### Analyzing the Bundle Size
+1. Create a project on [Alan AI Studio](https://studio.alan.app/)
+2. Copy your API key
+3. Create a `.env` file at the root of the project and add:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```env
+API_KEY=your_alan_ai_api_key_here
+```
 
-### Making a Progressive Web App
+💡 **Tip:** Never hardcode API keys in your codebase. Use environment variables for security.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 4. Start the App
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The app will run locally at `http://localhost:3000`
 
-### Deployment
+## Usage Guide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Running the App
 
-### `npm run build` fails to minify
+After running `npm start`, the app will load in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The homepage displays an introductory video with sound.
+- After the intro, the app transitions to the main interface, where you can interact with "Instructions" to open a modal with voice command examples.
+
+### Voice Commands
+
+The app uses the Alan AI SDK to enable voice-controlled navigation. Here are the supported voice commands:
+
+- **Fetch News**: "Give me the latest news" or "newHeadlines" to fetch and display news articles.
+- **Open Instructions**: "Instructions" to open a modal with voice command examples.
+- **Highlight Articles**: "Highlight" to read article highlights.
+- **Open Article**: "Open article number [number]" (e.g., "Open article number 5") to open the specified article in a new tab.
+- **Go Back**: "Go back" to return to the previous state.
+- **Respond to Highlights Prompt**: After fetching news, the app asks "Would you like me to read the highlights?". You can respond with **"Yes"** or **"No"**.
+
+### Main Interface
+
+#### Homepage with Introductory Video
+
+- On first load, the app displays an introductory video.
+
+## Screenshots
+
+![Homepage with Introductory Video](./src/images/introductory-page.jpg)
+
+- After the video, the app transitions to the Homepage.
+
+## Screenshots
+
+![Homepage with Introductory Video](./src/images/homepage.jpg)
+
+#### Instruction Modal
+
+- Open the instruction modal by saying "Instructions".
+- The modal provides examples of voice commands for fetching news by categories, terms, and sources.
+- Categories include Business, Entertainment, General, Health, Science, Sports, and Technology.
+- Sources include CNN, Wired, BBC News, Time, IGN, Buzzfeed, and ABC News.
+
+## Screenshots
+
+![Instruction Modal](./src/images/instructions.jpg)
+
+## Example Usage
+
+### Fetching News with Voice Commands
+
+1. Say: "Give me the latest news".
+2. The app fetches news articles and displays them as cards.
+3. After fetching news, the app asks if you'd like it to read the highlights.
+   - Say: **"Yes"** to begin auto-reading.
+     - The app starts from the first article, highlights it with a yellow bottom color, and scrolls automatically.
+   - Say: **"No"** to skip reading.
+
+#### News Cards
+
+- Once articles are fetched, they are displayed in a responsive grid layout.
+- Each card shows the article's title, description, source, publication date, and image.
+- The **first news card is always the active article** and is not controlled by voice commands.
+- After fetching news, the app prompts the user to confirm if they want it to read the highlights.
+  - If the user says **"Yes"**, the app begins reading from the first article.
+  - While reading, the active article is indicated with a **yellow bottom color**.
+  - The app automatically scrolls to each article as it reads.
+
+## Screenshots
+
+![News Cards Interface](./src/images/news-cards.jpg)
+
+
+### Opening an Article
+
+- Say: "Open article number 3".
+- The app opens the third article in a new browser tab.
+
+### Viewing Instructions
+
+- Say: "Instructions".
+- The instruction modal opens, showing examples of voice commands.
+````
