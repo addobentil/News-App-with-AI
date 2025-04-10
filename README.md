@@ -99,13 +99,13 @@ The app uses the Alan AI SDK to enable voice-controlled navigation. Here are the
 
 - On first load, the app displays an introductory video.
 
-## Screenshots
+## Screenshot
 
 ![Homepage with Introductory Video](./src/images/introductory-page.jpg)
 
 - After the video, the app transitions to the Homepage.
 
-## Screenshots
+## Screenshot
 
 ![Homepage with Introductory Video](./src/images/homepage.jpg)
 
@@ -116,7 +116,7 @@ The app uses the Alan AI SDK to enable voice-controlled navigation. Here are the
 - Categories include Business, Entertainment, General, Health, Science, Sports, and Technology.
 - Sources include CNN, Wired, BBC News, Time, IGN, Buzzfeed, and ABC News.
 
-## Screenshots
+## Screenshot
 
 ![Instruction Modal](./src/images/instructions.jpg)
 
@@ -141,7 +141,7 @@ The app uses the Alan AI SDK to enable voice-controlled navigation. Here are the
   - While reading, the active article is indicated with a **yellow bottom color**.
   - The app automatically scrolls to each article as it reads.
 
-## Screenshots
+## Screenshot
 
 ![News Cards Interface](./src/images/news-cards.jpg)
 
@@ -149,8 +149,3 @@ The app uses the Alan AI SDK to enable voice-controlled navigation. Here are the
 
 - Say: "Open article number 3".
 - The app opens the third article in a new browser tab.
-
-### Viewing Instructions
-
-- Say: "Instructions".
-- The instruction modal opens, showing examples of voice commands.
