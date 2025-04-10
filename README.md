@@ -38,8 +38,6 @@ git clone https://github.com/addobentil/News-App-with-AI.git
 cd News-App-with-AI
 ```
 
-````
-
 ### 2. Install Dependencies
 
 ```bash
@@ -147,7 +145,6 @@ The app uses the Alan AI SDK to enable voice-controlled navigation. Here are the
 
 ![News Cards Interface](./src/images/news-cards.jpg)
 
-
 ### Opening an Article
 
 - Say: "Open article number 3".
@@ -157,4 +154,3 @@ The app uses the Alan AI SDK to enable voice-controlled navigation. Here are the
 
 - Say: "Instructions".
 - The instruction modal opens, showing examples of voice commands.
-````
